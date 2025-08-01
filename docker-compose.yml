@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  postgres-db:
+    image: postgres:15
+    container_name: coffee-db
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=coffeeuser
+      - POSTGRES_PASSWORD=coffeepassword
+      - POSTGRES_DB=coffee_order_db
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
