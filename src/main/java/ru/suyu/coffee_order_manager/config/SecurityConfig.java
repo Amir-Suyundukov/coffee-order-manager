@@ -51,6 +51,7 @@ public class SecurityConfig {
         return http.build();
     }
 
+
     public UserDetailsService userDetailsService(UserService userService) {
         return username -> (org.springframework.security.core.userdetails.UserDetails) userService.findByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User with username '" + username + "' not found"));
