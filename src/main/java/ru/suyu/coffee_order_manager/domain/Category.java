@@ -28,3 +28,4 @@ public class Category {
     @EqualsAndHashCode.Exclude
     private Set<MenuItem> menuItems;
 }
+// проверка комита
